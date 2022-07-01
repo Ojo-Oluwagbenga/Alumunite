@@ -1,0 +1,16 @@
+.c-v{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.f-2{
+    position: relative;
+    z-index: 2;
+    background-color: white;
+}
+.container{
+    margin: 0px auto;
+    width: 80%;
+    max-width: 500px;
+    min-width: 100px;
+}

@@ -1,0 +1,334 @@
+html{
+    height: 100vh;
+    width: 100vw;
+}
+body, *{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gantari', sans-serif;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+.supercont{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.sidebar{
+    position: fixed;
+    height: 100%;
+    width: 80%;
+    max-width: 400px;
+    min-width:200px;
+    background-color: white;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: left 0.3s ease-in;
+}
+.mainbar{
+    height: fit-content;
+    width: calc(100% - 450px);
+    position: relative;
+    background-color:#f1f9ff;
+    margin-left: 450px;
+}
+.pagefilm {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    top: 0;
+    display: none;
+    z-index: 100;
+}
+
+.openside{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    height: 30px;
+    width: 40px;
+    background-color: #d2d5ff3d;
+    border-radius:0 10px 0 10px;
+    cursor: pointer;
+    display: none;
+}
+.openside svg{
+    margin: 0px auto;
+    display: flex;
+    height: 20px;
+    fill: blue;
+    transform: rotateZ(90deg);
+}
+
+/* SideBar */
+
+.sidebar .org-logo img{
+    height: 85px;
+    padding: 25px;
+    object-fit: contain;
+}
+.side-nav{
+    margin-left: 10px;
+    font-size: 15px;
+}
+.side-nav .navpack{
+    display: flex;
+}
+.side-nav .navpack#tologin{
+    cursor:pointer;
+    border-radius: 3px;
+}
+.side-nav .navpack#tologin:hover{
+    background-color: rgb(236, 236, 252);
+}
+
+.side-nav .navpack span.c-v{
+    font-weight: bold;
+}
+.navpack .checker{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color:#00dd00;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin: 1px 10px;
+}
+.navpack .checker .innerbox{
+    margin: 0px auto;
+    width: 43%;
+    height: 25%;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotateZ(-43deg);
+}
+
+.page-tabs{
+    margin: 30px 0 0 10%;
+    position: relative;
+}
+.page-tabs .extratext{
+    padding: 5px;
+    padding-left: 45px;
+    color:grey;
+    width: 100%;
+}
+.page-tabs .line{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color:#dfdfdf;
+    top: 0px;
+    left: 21px;
+}
+.svg-cont{
+    margin-top: 100px;
+    width: 100%;
+}
+.svg-cont img{
+    display: block;
+    border-bottom: 2px solid #f1f0f0;
+    object-fit: contain;
+    width: 70%;
+    margin: 0px auto;
+}
+
+/* Main Bar */
+
+.entry-box:hover{
+    cursor: pointer;
+}
+.mainbar .sub-mainbar{
+    padding-top: 30px;
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+.sub-mainbar .page-title{
+    font-size: 35px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.entry-hold{
+    margin-bottom:40px;
+}
+.entry-hold .eh-title{
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 15px;
+
+}
+.entry-hold .entry-box{
+    background-color:white;
+    display: flex;
+    border-radius: 5px;
+    position: relative;
+    border: 1px solid #d5d5d5;
+    justify-content: space-between;
+}
+.entry-hold .entry-box .ent-text{
+    padding: 10px;
+    width: 100%;
+}
+.entry-hold .entry-box .entry-items{
+    display:none;
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    border-radius: 0px 10px 0px 10px;
+    z-index: 2;
+    top: 44px;
+    left: 0;
+}
+.entry-hold .entry-box .entry-items > :nth-child(n){
+    padding: 10px;
+    margin: 10px;
+    border-radius: 0px 10px 0px 10px;
+    border: 1px solid #f1f9ff;
+    transition: background-color 0.2s ease-in;
+}
+.entry-hold .entry-box .entry-items > :nth-child(n):hover{
+    background-color:#e6eff7;
+}
+.entry-hold .eh-extrainfo{
+    font-size: 14px;
+    text-align: right;
+    padding: 10px 0;
+}
+.entry-hold .eh-extrainfo > span{
+    color: #7171ff;
+    cursor: pointer;
+}
+
+.entry-hold .opensvg{
+    display: flex;
+    width: 10px;
+    margin: 0px 10px;
+}
+.entry-hold .open input{
+    padding: 12px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+}
+
+
+.sub-mainbar .et-extra{
+    display: flex;
+    margin-bottom: 15px;
+}
+.et-extra .rad-button{
+    margin-right: 15px;
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+    transform: scale(1.5);
+}
+
+div.add-school{
+    display: flex;
+    position: relative;
+    margin: 20px auto;
+    background-color: #e2f1ff;
+    border-radius: 5px;
+}
+.add-school .capsvg{
+    width: 20%;
+    align-items: center;
+}
+.add-school .text{
+    width: 60%;
+}
+.add-school .text .add-title{
+    color: blue;
+}
+.add-school .text .text-pack :nth-child(n){
+    padding: 5px;
+}
+
+div.submit{
+    display: flex;         
+    justify-content: flex-end;   
+    flex-direction: row;
+    height: 50px;
+}
+.submit .submitbutton{
+    height: 35px;
+    width: 80%;
+    max-width: 200px;
+    text-align: center;
+    background-color: #0070c0;;
+    border-radius: 3px;
+    color: white;
+    cursor:pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in;
+}
+.submit .submitbutton:hover{
+    background-color: #004577;
+}
+@media (max-width: 950px) {
+    .mainbar{
+        width: calc(55%);
+        margin-left: 45%;
+    }
+    .sidebar{
+        width: 45%;
+    }
+}
+@media (min-width: 700px) {
+    .sidebar{
+        left:0% !important;
+    }
+}
+@media (max-width: 700px) {
+    .sidebar{
+        left:-100%;
+
+    }
+    div.openside{
+        display: flex;
+    }
+    .mainbar{
+        width: 100%;
+        margin: unset;
+    }
+    div.container{
+        max-width: 400px;
+    }
+    .add-school #cap svg{
+        height: 30% !important;
+    }
+    .side-nav .navpack span.c-v{
+        font-size: 12px;
+    }
+    .page-tabs .extratext{
+        font-size: 11px;
+    }
+    .page-tabs{
+        margin: 15px 0 0 10%;
+    }
+    .navpack .checker{
+        font-size: 11px;
+    }
+}
+@media (max-width: 500px) {
+    .add-school #cap svg{
+        height: 25% !important;
+    }
+}
+@media (max-width: 300px) {
+    .add-school #cap svg{
+        height: 20% !important;
+    }
+}
+@media (max-width: 200px) {
+    .add-school #cap svg{
+        height: 15% !important;
+    }
+}
